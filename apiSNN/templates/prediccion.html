@@ -1,13 +1,25 @@
-{% load static %}
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CNN PROJECT</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>CNN Prediccion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-  <body>
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark" style="background-color: black">
+    <div>
+        <a href="https://www.javaguides.net" class="navbar-brand">Red Neuronal Prediccion Expresiones Faciales </a>
+    </div>
+
+    <ul class="navbar-nav">
+        <li><a href="#" class="nav-link">Prediccion</a></li>
+    </ul>
+</nav>
+<div class="alert alert-primary" role="alert">
+  Esta es la Prediccion de su imagen escogida con la Probabilidad
+</div>
+</header>
+  <body  style="background-image: url('images/fondo.jpg');">
     
     <script>
         function goBack() {
@@ -24,19 +36,37 @@
     -webkit-transform: translate(-50%, -50%); width: 60%; height: 70%; max-width: 900px;">
     <form action="/">
       <div class="banner">
-        <h1>Prediccion del Sistema</h1>
+
+
+        <div class="alert alert-warning" role="alert">
+          Prediccion!
+        </div>
+       
       </div>
 
       <div class="item">
-          <p><strong>Animal Predecido:</strong></p>
+        <div class="alert alert-success" role="alert">
+          Expresion Predecida por el sistema :
+        </div>
         <input id="elm_link" name="elm_link" type="text" value="{{ pred }}" readonly/>
       </div>
+      <div>
+        <p>  
+        </p>
+      </div>
       <div class="item">
-          <p><strong>Probabilidad:</strong></p>
+        <div class="alert alert-info" role="alert">
+         Probabilidad :
+        </div>
         <input id="elm_upload" name="elm_upload" type="text" value="{{ prob }}" readonly/>
       </div>
+      <div>
+        <p>  
+        </p>
+      </div>
+    
       <div class="item" style="width: 100%">
-          <input onclick="goBack()" type="button" value="REGRESAR A LA PAGINA ANTERIOR">
+          <input onclick="goBack()" type="button" class="btn btn-success"  value="REGRESAR A LA PAGINA INICIO">
       </div>
     </form>
     </div>
